@@ -4,13 +4,13 @@ import { IsNumber, IsPositive, IsString } from "class-validator";
 export class CreateProductDto {
 
     @IsString()
-    public name:String;
+    public name:string;
     @IsNumber({
         maxDecimalPlaces: 4
     })
     @IsPositive()
     @Type(()=>Number)
-    public price: String;
+    public price: number;
 
 
 }
